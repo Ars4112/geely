@@ -1,0 +1,1238 @@
+<extends src="layouts/main.html" locals='{ "title": "HELLO", "bodyClass": "" }'>
+	<block name="body">
+		<div class="wrapper">
+			<!--      Header      -->
+
+			<header class="header">
+				<div class="header__wrapper container">
+					<a href="#">
+						<img
+							class="header__logo"
+							src="/svg/logo.svg"
+							alt="Логотип"
+							width="166"
+							height="32"
+						/>
+					</a>
+
+					<div class="header__inner-wrapper">
+						<div class="header__contact-wrapper contacts" x-show="!isOpenMenu">
+							<div class="contacts__address-wrapper">
+								<span class="contacts__address"
+									>г. Москва, ул. Мельникова, д.&nbsp;5</span
+								>
+								<a class="contacts__link arrow-link" href="#">Как проехать</a>
+							</div>
+							<ul class="contacts__list">
+								<li class="contacts__item contacts__item--tel">
+									<a class="contacts__tel" href="tel:+7-495-153-58-16"
+										>+7 (495) 153-58-16</a
+									>
+									<span class="contacts__time">c 09:00 до 21:00</span>
+								</li>
+								<li class="contacts__item">
+									<ul class="contacts__social-list">
+										<li
+											class="contacts__social-item contacts__social-item--tel"
+										>
+											<span class="visually-hidden"> Позвонить </span>
+											<a class="contacts__social-link" href="#">
+												<c-icons.Call></c-icons.Call>
+											</a>
+										</li>
+										<li class="contacts__social-item">
+											<span class="visually-hidden"> Телеграм </span>
+											<a class="contacts__social-link" href="#">
+												<c-icons.Telegram></c-icons.Telegram>
+											</a>
+										</li>
+										<li class="contacts__social-item">
+											<span class="visually-hidden"> Ватсап </span>
+											<a class="contacts__social-link" href="#">
+												<c-icons.Whatsapp></c-icons.Whatsapp>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+
+						<button
+							class="header__button"
+							@click="isOpenMenu = !isOpenMenu"
+							:class="isOpenMenu && 'button--close'"
+						>
+							<span class="header__button-text">Меню </span>
+						</button>
+					</div>
+				</div>
+
+				<!--     Menu      -->
+
+				<div
+					class="header__menu-wrapper menu container"
+					x-show="isOpenMenu"
+					x-transition:enter="transform duration-600"
+				>
+					<c-global.Opinion></c-global.Opinion>
+					<nav class="menu__nav">
+						<ul class="menu__nav-list">
+							<li class="menu__nav-item">
+								<a class="menu__nav-link" href="#">Услуги</a>
+							</li>
+							<li class="menu__nav-item">
+								<a class="menu__nav-link" href="#">О сервисе</a>
+							</li>
+							<li class="menu__nav-item">
+								<a class="menu__nav-link" href="#">Преимущества</a>
+							</li>
+							<li class="menu__nav-item">
+								<a class="menu__nav-link" href="#">Стоимость ТО</a>
+							</li>
+							<li class="menu__nav-item">
+								<a class="menu__nav-link" href="#">Спецпредложения</a>
+							</li>
+							<li class="menu__nav-item">
+								<a class="menu__nav-link" href="#">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="menu__contact-wrapper contacts">
+						<div class="contacts__address-wrapper">
+							<span class="contacts__address contacts__address--icon"
+								>г. Москва, ул. Мельникова, д.&nbsp;5</span
+							>
+							<a class="contacts__link arrow-link" href="#">Как проехать</a>
+						</div>
+						<ul class="contacts__list contacts__list--icon">
+							<li class="contacts__item">
+								<a class="contacts__tel" href="tel:+7-495-153-58-16"
+									>+7 (495) 153-58-16</a
+								>
+								<span class="contacts__time">c 09:00 до 21:00</span>
+							</li>
+							<li class="contacts__item">
+								<ul class="contacts__social-list">
+									<li class="contacts__social-item">
+										<span class="visually-hidden"> Телеграм </span>
+										<a class="contacts__social-link" href="#">
+											<c-icons.Telegram></c-icons.Telegram>
+										</a>
+									</li>
+									<li class="contacts__social-item">
+										<span class="visually-hidden"> Ватсап </span>
+										<a class="contacts__social-link" href="#">
+											<c-icons.Whatsapp></c-icons.Whatsapp>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+
+			<main class="main">
+				<section class="main__block">
+					<div class="main__block-inner container">
+						<c-global.Opinion></c-global.Opinion>
+						<ul class="contacts__list">
+							<li class="contacts__item contacts__address--icon">
+								<span class="contacts__address"
+									>г. Москва, ул. Мельникова, д.&nbsp;5</span
+								>
+								<a class="contacts__link arrow-link" href="#">Как проехать</a>
+							</li>
+							<li class="contacts__item contacts__list--icon">
+								<a class="contacts__tel" href="tel:+7-495-153-58-16"
+									>+7 (495) 153-58-16</a
+								>
+								<span class="contacts__time">c 09:00 до 21:00</span>
+							</li>
+						</ul>
+						<div class="main__block-consultation consultation">
+							<div class="consultation__item">
+								<p class="consultation__text">
+									Воспользуйтесь бесплатной консультацией
+								</p>
+								<c-global.Form></c-global.Form>
+								<p class="consultation__text-agreement">
+									Оставляя заявку вы даёте согласие на обработку ваших
+									<span>Персональных данных</span>
+								</p>
+							</div>
+							<div class="number">
+								<p class="number__item">
+									<span class="number__value">12 255</span>
+									<span class="number__text">Довольных клиентов</span>
+								</p>
+
+								<p class="number__item">
+									<span class="number__value">10</span>
+									<span class="number__text">Лет на рынке</span>
+								</p>
+								<p class="number__item">
+									<span class="number__value">12</span>
+									<span class="number__text">Сотрудников в штате</span>
+								</p>
+
+								<p class="number__item">
+									<span class="number__value">12 +</span>
+									<span class="number__text">Средний стаж сотрудников</span>
+								</p>
+							</div>
+						</div>
+						<div class="main__block-slider-wrapper">
+							<div
+								class="splide splide__promotion"
+								data-slider="splide__promotion"
+							>
+								<div class="splide__track">
+									<ul class="splide__list">
+										<li class="splide__slide">
+											<a
+												href="#"
+												class="promotion__item"
+												@click.prevent="isOpenModal = true"
+											>
+												<div class="promotion__image-wrapper">
+													<picture>
+														<source
+															srcset="
+																/images/offer-1.png,
+																/images/offer-1@2x.png
+															"
+															media="(min-width: 768)"
+															width="76"
+															height="76"
+														/>
+														<img
+															src="/images/offer-1.png"
+															srcset="/images/offer-1@2x.png"
+															alt="процент"
+															width="120"
+															height="120"
+														/>
+													</picture>
+												</div>
+
+												<div class="promotion__text-wrapper">
+													<p class="promotion__text">
+														Скидка на услуги при первом посещении
+													</p>
+													<span class="promotion__link arrow-link"
+														>Записаться</span
+													>
+												</div>
+											</a>
+										</li>
+										<li class="splide__slide">
+											<a
+												href="#"
+												class="promotion__item"
+												@click.prevent="isOpenModal = true"
+											>
+												<div class="promotion__image-wrapper">
+													<picture>
+														<source
+															srcset="
+																/images/offer-2.png,
+																/images/offer-2@2x.png
+															"
+															media="(min-width: 768)"
+															width="76"
+															height="76"
+														/>
+														<img
+															src="/images/offer-2.png"
+															srcset="/images/offer-2@2x.png"
+															alt="процент"
+															width="120"
+															height="120"
+														/>
+													</picture>
+												</div>
+
+												<div class="promotion__text-wrapper">
+													<p class="promotion__text">
+														Бесплатная замена масла при первом ТО
+													</p>
+													<span class="promotion__link arrow-link"
+														>Записаться</span
+													>
+												</div>
+											</a>
+										</li>
+										<li class="splide__slide">
+											<a
+												class="promotion__item"
+												@click.prevent="isOpenModal = true"
+											>
+												<div class="promotion__image-wrapper">
+													<picture>
+														<source
+															srcset="
+																/images/offer-3.png,
+																/images/offer-3@2x.png
+															"
+															media="(min-width: 768)"
+															width="76"
+															height="76"
+														/>
+														<img
+															src="/images/offer-3.png"
+															srcset="/images/offer-3@2x.png"
+															alt="процент"
+															width="120"
+															height="120"
+														/>
+													</picture>
+												</div>
+
+												<div class="promotion__text-wrapper">
+													<p class="promotion__text">
+														Шиномонтаж + сход развал по специальной цене
+													</p>
+													<span class="promotion__link arrow-link"
+														>Записаться</span
+													>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<c-global.Arrows></c-global.Arrows>
+						</div>
+					</div>
+				</section>
+				<section class="service">
+					<div class="service__container container">
+						<h2 class="service__title">Полный спектр услуг</h2>
+						<div class="service__wrapper">
+							<ul class="service__list">
+								<li class="service__item">
+									<button class="service__text"><span> Ремонт</span></button>
+									<div class="service__tab service__item-tab">
+										<div class="service__tab-wrapper">
+											<div class="service__tab-value">
+												<h3 class="service__tab-title">Ремонт</h3>
+												<p class="service__tab-price-text">
+													<span>Стоимость</span>
+													<span class="service__tab-price">от 2 000 ₽</span>
+												</p>
+												<div class="service__consultation consultation">
+													<c-global.Form></c-global.Form>
+													<p class="consultation__text-agreement">
+														Оставляя заявку вы даёте согласие на обработку ваших
+														<span>Персональных данных</span>
+													</p>
+												</div>
+											</div>
+										</div>
+										<p class="service__tab-text">
+											Профессиональный ремонт &laquo;Geely&raquo; включает
+											в&nbsp;себя работы разной направленности
+											по&nbsp;восстановлению нормального функционирования
+											агрегатов и&nbsp;систем автомобиля. От&nbsp;правильности
+											их&nbsp;проведения зависит&nbsp;то, насколько безопасной
+											будет эксплуатация в&nbsp;будущем, а&nbsp;также
+											оптимизация расходов на&nbsp;неё.
+										</p>
+									</div>
+								</li>
+								<li class="service__item">
+									<button class="service__text">Техническое обслуживание</button>
+									<div class="service__tab service__item-tab">
+										<div class="service__tab-wrapper">
+											<div class="service__tab-value">
+												<h3 class="service__tab-title">Техническое обслуживание</h3>
+												<p class="service__tab-price-text">
+													<span>Стоимость</span>
+													<span class="service__tab-price">от 2 000 ₽</span>
+												</p>
+												<div class="service__consultation consultation">
+													<c-global.Form></c-global.Form>
+													<p class="consultation__text-agreement">
+														Оставляя заявку вы даёте согласие на обработку ваших
+														<span>Персональных данных</span>
+													</p>
+												</div>
+											</div>
+										</div>
+										<p class="service__tab-text">
+											Профессиональный ремонт &laquo;Geely&raquo; включает
+											в&nbsp;себя работы разной направленности
+											по&nbsp;восстановлению нормального функционирования
+											агрегатов и&nbsp;систем автомобиля. От&nbsp;правильности
+											их&nbsp;проведения зависит&nbsp;то, насколько безопасной
+											будет эксплуатация в&nbsp;будущем, а&nbsp;также
+											оптимизация расходов на&nbsp;неё.
+										</p>
+									</div>
+								</li>
+								<li class="service__item">
+									<button class="service__text">Диагностика</button>
+									<div class="service__tab service__item-tab">
+										<div class="service__tab-wrapper">
+											<div class="service__tab-value">
+												<h3 class="service__tab-title">Диагностика</h3>
+												<p class="service__tab-price-text">
+													<span>Стоимость</span>
+													<span class="service__tab-price">от 2 000 ₽</span>
+												</p>
+												<div class="service__consultation consultation">
+													<c-global.Form></c-global.Form>
+													<p class="consultation__text-agreement">
+														Оставляя заявку вы даёте согласие на обработку ваших
+														<span>Персональных данных</span>
+													</p>
+												</div>
+											</div>
+										</div>
+										<p class="service__tab-text">
+											Профессиональный ремонт &laquo;Geely&raquo; включает
+											в&nbsp;себя работы разной направленности
+											по&nbsp;восстановлению нормального функционирования
+											агрегатов и&nbsp;систем автомобиля. От&nbsp;правильности
+											их&nbsp;проведения зависит&nbsp;то, насколько безопасной
+											будет эксплуатация в&nbsp;будущем, а&nbsp;также
+											оптимизация расходов на&nbsp;неё.
+										</p>
+									</div>
+								</li>
+								<li class="service__item">
+									<button class="service__text">Кузовной ремонт</button>
+									<div class="service__tab service__item-tab">
+										<div class="service__tab-wrapper">
+											<div class="service__tab-value">
+												<h3 class="service__tab-title">Кузовной ремонт</h3>
+												<p class="service__tab-price-text">
+													<span>Стоимость</span>
+													<span class="service__tab-price">от 2 000 ₽</span>
+												</p>
+												<div class="service__consultation consultation">
+													<c-global.Form></c-global.Form>
+													<p class="consultation__text-agreement">
+														Оставляя заявку вы даёте согласие на обработку ваших
+														<span>Персональных данных</span>
+													</p>
+												</div>
+											</div>
+										</div>
+										<p class="service__tab-text">
+											Профессиональный ремонт &laquo;Geely&raquo; включает
+											в&nbsp;себя работы разной направленности
+											по&nbsp;восстановлению нормального функционирования
+											агрегатов и&nbsp;систем автомобиля. От&nbsp;правильности
+											их&nbsp;проведения зависит&nbsp;то, насколько безопасной
+											будет эксплуатация в&nbsp;будущем, а&nbsp;также
+											оптимизация расходов на&nbsp;неё.
+										</p>
+									</div>
+								</li>
+								<li class="service__item">
+									<button class="service__text">Сход-развал</button>
+									<div class="service__tab service__item-tab">
+										<div class="service__tab-wrapper">
+											<div class="service__tab-value">
+												<h3 class="service__tab-title">Сход-развал</h3>
+												<p class="service__tab-price-text">
+													<span>Стоимость</span>
+													<span class="service__tab-price">от 2 000 ₽</span>
+												</p>
+												<div class="service__consultation consultation">
+													<c-global.Form></c-global.Form>
+													<p class="consultation__text-agreement">
+														Оставляя заявку вы даёте согласие на обработку ваших
+														<span>Персональных данных</span>
+													</p>
+												</div>
+											</div>
+										</div>
+										<p class="service__tab-text">
+											Профессиональный ремонт &laquo;Geely&raquo; включает
+											в&nbsp;себя работы разной направленности
+											по&nbsp;восстановлению нормального функционирования
+											агрегатов и&nbsp;систем автомобиля. От&nbsp;правильности
+											их&nbsp;проведения зависит&nbsp;то, насколько безопасной
+											будет эксплуатация в&nbsp;будущем, а&nbsp;также
+											оптимизация расходов на&nbsp;неё.
+										</p>
+									</div>
+								</li>
+							</ul>
+							<div class="service__tab service__tab--hidden">
+								<div class="service__tab-wrapper">
+									<div class="service__tab-value">
+										<h3 class="service__tab-title">Ремонт</h3>
+										<p class="service__tab-price-text">
+											<span>Стоимость</span>
+											<span class="service__tab-price">от 2 000 ₽</span>
+										</p>
+										<div class="service__consultation consultation">
+											<c-global.Form></c-global.Form>
+											<p class="consultation__text-agreement">
+												Оставляя заявку вы даёте согласие на обработку ваших
+												<span>Персональных данных</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<p class="service__tab-text">
+									Профессиональный ремонт &laquo;Geely&raquo; включает
+									в&nbsp;себя работы разной направленности
+									по&nbsp;восстановлению нормального функционирования агрегатов
+									и&nbsp;систем автомобиля. От&nbsp;правильности
+									их&nbsp;проведения зависит&nbsp;то, насколько безопасной будет
+									эксплуатация в&nbsp;будущем, а&nbsp;также оптимизация расходов
+									на&nbsp;неё.
+								</p>
+							</div>
+							<div class="service__tab service__tab--hidden">
+								<div class="service__tab-wrapper">
+									<div class="service__tab-value">
+										<h3 class="service__tab-title">Техническое обслуживание</h3>
+										<p class="service__tab-price-text">
+											<span>Стоимость</span>
+											<span class="service__tab-price">от 2 000 ₽</span>
+										</p>
+										<div class="service__consultation consultation">
+											<c-global.Form></c-global.Form>
+											<p class="consultation__text-agreement">
+												Оставляя заявку вы даёте согласие на обработку ваших
+												<span>Персональных данных</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<p class="service__tab-text">
+									Профессиональный ремонт &laquo;Geely&raquo; включает
+									в&nbsp;себя работы разной направленности
+									по&nbsp;восстановлению нормального функционирования агрегатов
+									и&nbsp;систем автомобиля. От&nbsp;правильности
+									их&nbsp;проведения зависит&nbsp;то, насколько безопасной будет
+									эксплуатация в&nbsp;будущем, а&nbsp;также оптимизация расходов
+									на&nbsp;неё.
+								</p>
+							</div>
+							<div class="service__tab service__tab--hidden">
+								<div class="service__tab-wrapper">
+									<div class="service__tab-value">
+										<h3 class="service__tab-title">Диагностика</h3>
+										<p class="service__tab-price-text">
+											<span>Стоимость</span>
+											<span class="service__tab-price">от 2 000 ₽</span>
+										</p>
+										<div class="service__consultation consultation">
+											<c-global.Form></c-global.Form>
+											<p class="consultation__text-agreement">
+												Оставляя заявку вы даёте согласие на обработку ваших
+												<span>Персональных данных</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<p class="service__tab-text">
+									Профессиональный ремонт &laquo;Geely&raquo; включает
+									в&nbsp;себя работы разной направленности
+									по&nbsp;восстановлению нормального функционирования агрегатов
+									и&nbsp;систем автомобиля. От&nbsp;правильности
+									их&nbsp;проведения зависит&nbsp;то, насколько безопасной будет
+									эксплуатация в&nbsp;будущем, а&nbsp;также оптимизация расходов
+									на&nbsp;неё.
+								</p>
+							</div>
+							<div class="service__tab service__tab--hidden">
+								<div class="service__tab-wrapper">
+									<div class="service__tab-value">
+										<h3 class="service__tab-title">Кузовной ремонт</h3>
+										<p class="service__tab-price-text">
+											<span>Стоимость</span>
+											<span class="service__tab-price">от 2 000 ₽</span>
+										</p>
+										<div class="service__consultation consultation">
+											<c-global.Form></c-global.Form>
+											<p class="consultation__text-agreement">
+												Оставляя заявку вы даёте согласие на обработку ваших
+												<span>Персональных данных</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<p class="service__tab-text">
+									Профессиональный ремонт &laquo;Geely&raquo; включает
+									в&nbsp;себя работы разной направленности
+									по&nbsp;восстановлению нормального функционирования агрегатов
+									и&nbsp;систем автомобиля. От&nbsp;правильности
+									их&nbsp;проведения зависит&nbsp;то, насколько безопасной будет
+									эксплуатация в&nbsp;будущем, а&nbsp;также оптимизация расходов
+									на&nbsp;неё.
+								</p>
+							</div>
+							<div class="service__tab service__tab--hidden">
+								<div class="service__tab-wrapper">
+									<div class="service__tab-value">
+										<h3 class="service__tab-title">Сход-развал</h3>
+										<p class="service__tab-price-text">
+											<span>Стоимость</span>
+											<span class="service__tab-price">от 2 000 ₽</span>
+										</p>
+										<div class="service__consultation consultation">
+											<c-global.Form></c-global.Form>
+											<p class="consultation__text-agreement">
+												Оставляя заявку вы даёте согласие на обработку ваших
+												<span>Персональных данных</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<p class="service__tab-text">
+									Профессиональный ремонт &laquo;Geely&raquo; включает
+									в&nbsp;себя работы разной направленности
+									по&nbsp;восстановлению нормального функционирования агрегатов
+									и&nbsp;систем автомобиля. От&nbsp;правильности
+									их&nbsp;проведения зависит&nbsp;то, насколько безопасной будет
+									эксплуатация в&nbsp;будущем, а&nbsp;также оптимизация расходов
+									на&nbsp;неё.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="about">
+					<div class="about__container container">
+						<div class="about__head-wrapper">
+							<h2 class="about__title">О нашем сервисе</h2>
+							<ul class="about__list">
+								<li class="about__item">
+									<span class="about__item-number">12 255</span>
+									<span class="about__item-text">Довольных клиентов</span>
+								</li>
+								<li class="about__item about__item--opinion">
+									<div class="about__item-opinion-wrapper">
+										<div class="about__opinion-image-wrapper">
+											<img
+												class="about__opinion-image"
+												src="/svg/about-opinion-yandex.svg"
+												alt="оценка яндекс"
+											/>
+											<img
+												class="about__image-stars"
+												src="/svg/stars.svg"
+												alt="звезды"
+											/>
+										</div>
+										<span
+											>Хорошее место <br />
+											в Яндекс Картах</span
+										>
+									</div>
+								</li>
+								<li class="about__item">
+									<span class="about__item-number">10</span>
+									<span class="about__item-text">Лет на рынке</span>
+								</li>
+								<li class="about__item">
+									<span class="about__item-number">12 +</span>
+									<span class="about__item-text">Средний стаж сотрудников</span>
+								</li>
+							</ul>
+						</div>
+						<div class="about__lower-wrapper">
+							<div class="about__text-container">
+								<h4 class="about__text-title">
+									<span>&laquo;Geely service&raquo;&nbsp;&mdash;</span>
+									cпециализированный центр по&nbsp;ремонту
+									и&nbsp;послегарантийному обслуживанию автомобилей Geely
+								</h4>
+
+								<p class="about__text">
+									Наш техцентр работает на&nbsp;московском рынке более
+									5&nbsp;лет и&nbsp;доказал свою компетентность
+									и&nbsp;пунктуальность.<br />
+									Вся работа выполняется на&nbsp;импортном оборудовании
+									и&nbsp;специальных стендах, которые рекомендованы
+									производителем. Богатое техническое оснащение мастерской
+									позволяет реализовать любые процедуры&nbsp;&mdash;
+									от&nbsp;замены масла в&nbsp;АКПП до&nbsp;капитального ремонта
+									ДВС. Мы&nbsp;работаем по&nbsp;регламенту &laquo;Geely&raquo;
+									и&nbsp;применяем оригинальные расходные материалы,
+									комплектующие и&nbsp;запчасти.
+								</p>
+
+								<p class="about__text-promice">
+									Для вашего автомобиля мы&nbsp;сделаем все&nbsp;&mdash;
+									проконсультируем, отремонтируем и&nbsp;обслужим.
+								</p>
+							</div>
+							<div class="about__slider-wrapper">
+								<section
+									class="splide splide__about"
+									data-slider="splide__about"
+								>
+									<div class="splide__track">
+										<ul class="splide__list">
+											<li class="splide__slide">
+												<picture>
+													<source
+														media="(min-width: 769px)"
+														srcset="
+															/images/about-slider/image-1.jpg,
+															/images/about-slider/image-1@2x.jpg
+														"
+														width="1120"
+														height="540"
+													/>
+													<img
+														class="about__slider-image"
+														src="/images/about-slider/image-1-tablet.jpg"
+														srcset="/images/about-slider/image-1-tablet@2x.jpg"
+														alt="фото автосервиса"
+														width="712"
+														height="620"
+													/>
+												</picture>
+											</li>
+											<li class="splide__slide">
+												<picture>
+													<source
+														media="(min-width: 769px)"
+														srcset="
+															/images/about-slider/image-1.jpg,
+															/images/about-slider/image-1@2x.jpg
+														"
+														width="1120"
+														height="540"
+													/>
+													<img
+														class="about__slider-image"
+														src="/images/about-slider/image-1-tablet.jpg"
+														srcset="/images/about-slider/image-1-tablet@2x.jpg"
+														alt="фото автосервиса"
+														width="712"
+														height="620"
+													/>
+												</picture>
+											</li>
+										</ul>
+									</div>
+								</section>
+								<c-global.Arrows></c-global.Arrows>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="cost">
+					<div class="cost__container container">
+						<div class="cost__title-wrapper">
+							<h2 class="cost__title">
+								Стоимость на&nbsp;ТО ниже, чем у&nbsp;дилера
+							</h2>
+							<span class="cost__footnote"
+								>В&nbsp;стоимость включены все виды работ, запасные части
+								и&nbsp;все расходные материалы</span
+							>
+						</div>
+						<div class="cost__slider-wrapper">
+							<section class="splide splide__cost" data-slider="splide__cost">
+								<div class="splide__track">
+									<ul class="splide__list">
+										<li class="splide__slide">
+											<div class="cost__item">
+												<div class="cost__item-title-wrapper">
+													<h3 class="cost__item-title">
+														<span>EMGRAND</span> <span>ТО 60 000 км</span>
+													</h3>
+
+													<ul class="cost__price-list">
+														<li class="cost__price-item">
+															<p class="cost__price cost__price-our">
+																<span class="cost__price-text">Цена у нас</span>
+																<span class="cost__price-value">12 000 ₽</span>
+															</p>
+														</li>
+														<li class="cost__price-item">
+															<p class="cost__price">
+																<span class="cost__price-text"
+																	>Цена у дилера</span
+																>
+																<span class="cost__price-value">25 000 ₽</span>
+															</p>
+														</li>
+													</ul>
+												</div>
+												<picture>
+													<source
+														media="(min-width: 769px)"
+														srcset="
+															/images/slider-auto/image-1.png,
+															/images/slider-auto/image-1@2x.png
+														"
+														width="600"
+														height="270"
+													/>
+													<!-- <source
+													media="(min-width: 375px)"
+													srcset="
+														/images/slider-auto/image-1.png,
+														/images/slider-auto/image-1@2x.png
+													"
+													width="344"
+													height="155"
+												/> -->
+
+													<img
+														src="/images/slider-auto/image-1.png"
+														srcset="/images/slider-auto/image-1@2x.png"
+														alt=""
+														width="344"
+														height="155"
+													/>
+												</picture>
+											</div>
+										</li>
+										<li class="splide__slide">
+											<div class="cost__item">
+												<div class="cost__item-title-wrapper">
+													<h3 class="cost__item-title">
+														<span>EMGRAND</span> <span>ТО 60 000 км</span>
+													</h3>
+
+													<ul class="cost__price-list">
+														<li class="cost__price-item">
+															<p class="cost__price cost__price-our">
+																<span class="cost__price-text">Цена у нас</span>
+																<span class="cost__price-value">12 000 ₽</span>
+															</p>
+														</li>
+														<li class="cost__price-item">
+															<p class="cost__price">
+																<span class="cost__price-text"
+																	>Цена у дилера</span
+																>
+																<span class="cost__price-value">25 000 ₽</span>
+															</p>
+														</li>
+													</ul>
+												</div>
+												<picture>
+													<source
+														media="(min-width: 769px)"
+														srcset="
+															/images/slider-auto/image-2.png,
+															/images/slider-auto/image-2@2x.png
+														"
+														width="600"
+														height="270"
+													/>
+													<!-- <source
+													media="(min-width: 376px)"
+													srcset="
+														/images/slider-auto/image-2.png,
+														/images/slider-auto/image-2@2x.png
+													"
+													width="330"
+													height="155"
+												/> -->
+
+													<img
+														src="/images/slider-auto/image-2.png"
+														srcset="/images/slider-auto/image-2@2x.png"
+														alt=""
+													/>
+												</picture>
+											</div>
+										</li>
+										<li class="splide__slide">
+											<div class="cost__item">
+												<div class="cost__item-title-wrapper">
+													<h3 class="cost__item-title">
+														<span>EMGRAND</span> <span>ТО 60 000 км</span>
+													</h3>
+
+													<ul class="cost__price-list">
+														<li class="cost__price-item">
+															<p class="cost__price cost__price-our">
+																<span class="cost__price-text">Цена у нас</span>
+																<span class="cost__price-value">12 000 ₽</span>
+															</p>
+														</li>
+														<li class="cost__price-item">
+															<p class="cost__price">
+																<span class="cost__price-text"
+																	>Цена у дилера</span
+																>
+																<span class="cost__price-value">25 000 ₽</span>
+															</p>
+														</li>
+													</ul>
+												</div>
+												<picture>
+													<source
+														media="(min-width: 769px)"
+														srcset="
+															/images/slider-auto/image-3.png,
+															/images/slider-auto/image-3@2x.png
+														"
+														width="600"
+														height="270"
+													/>
+													<!-- <source
+													media="(min-width: 376px)"
+													srcset="
+														/images/slider-auto/image-1.png,
+														/images/slider-auto/image-1@2x.png
+													"
+													width="330"
+													height="155"
+												/> -->
+
+													<img
+														src="/images/slider-auto/image-3.png"
+														srcset="/images/slider-auto/image-3@2x.png"
+														alt=""
+													/>
+												</picture>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</section>
+
+							<c-global.Arrows></c-global.Arrows>
+						</div>
+					</div>
+				</section>
+				<section class="achievements">
+					<div class="achievements__container container">
+						<h3 class="achievements__title">Мы&nbsp;лучшие на&nbsp;рынке</h3>
+						<ul class="achievements__list">
+							<li class="achievements__item achievements__item--main-first">
+								<h3 class="achievements__item-title">
+									12&nbsp;месяцев гарантии на&nbsp;все работы
+								</h3>
+								<p class="achievements__item-text">
+									Гарантия действует с&nbsp;момента передачи полностью
+									отремонтированного авто или с&nbsp;момента подписи акта
+									приёма-передачи владельцу авто
+								</p>
+							</li>
+							<li class="achievements__item achievements__item--tiam">
+								<h3 class="achievements__item-title">Команда</h3>
+								<p class="achievements__item-text">
+									Команда автосервисов Geely состоит из&nbsp;12&nbsp;человек,
+									которые имеют опыт работы с&nbsp;маркой Geely не&nbsp;менее
+									4-х лет
+								</p>
+							</li>
+							<li class="achievements__item achievements__item--quality">
+								<h3 class="achievements__item-title">Качество</h3>
+								<p class="achievements__item-text">
+									Мы&nbsp;уверены в&nbsp;качестве используемых материалов
+									и&nbsp;в&nbsp;высоком профессионализме наших сотрудников
+								</p>
+							</li>
+							<li class="achievements__item achievements__item--parts">
+								<h3 class="achievements__item-title">Запчасти</h3>
+								<p class="achievements__item-text">
+									Мы&nbsp;являемся партнером крупнейших оптовиков. Все запчасти
+									мы везем напрямую
+								</p>
+							</li>
+							<li class="achievements__item achievements__item--cost">
+								<h3 class="achievements__item-title">Цены</h3>
+								<p class="achievements__item-text">
+									Мы&nbsp;предлагаем своим клиентам самые выгодные цены ниже,
+									чем у официального дилера
+								</p>
+							</li>
+							<li
+								class="achievements__item achievements__item--main achievements__item--main-second"
+							>
+								<h3 class="achievements__item-title">
+									Сохранение заводской гарантии
+								</h3>
+								<p class="achievements__item-text">
+									Заводская гарантия сохраняется лишь в&nbsp;том случае, если
+									авто было оформлено в&nbsp;официальном дилерском центре
+									на&nbsp;территории&nbsp;РФ
+								</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="good-place">
+					<div class="good-place__container container">
+						<div class="good-place__title-wrapper">
+							<h2 class="good-place__title">
+								Хорошее место в&nbsp;Яндекс Картах
+							</h2>
+							<picture>
+								<source
+									media="(min-width: 769px)"
+									srcset="/svg/good-place-desctop.svg"
+									width="200"
+									height="96"
+								/>
+								<img
+									src="/svg/good-place-tablet.svg"
+									alt="Оценка Яндекса"
+									width="167"
+									height="67"
+								/>
+							</picture>
+						</div>
+						<div class="good-place__block-wrapper">
+							<div class="good-place__slider">
+								<section
+									class="splide splide__good-place"
+									data-slider="splide__good-place"
+								>
+									<div class="splide__track">
+										<ul class="splide__list">
+											<li class="splide__slide">
+												<picture>
+													<source
+														media="(min-width: 769px)"
+														srcset="
+															/images/about-slider/image-3.jpg,
+															/images/about-slider/image-3@2x.jpg
+														"
+														width="1120"
+														height="540"
+													/>
+													<!-- <source
+														media="(max-width: 375px)"
+														srcset="
+															/images/about-slider/image-3-tablet.jpg,
+															/images/about-slider/image-3-tablet@2x.jpg
+														"
+														width="712"
+														height="620"
+													/> -->
+													<img
+														class="good-place__image"
+														src="/images/about-slider/image-3-tablet.jpg"
+														srcset="/images/about-slider/image-3-tablet@2x.jpg"
+														alt=""
+														width="344"
+														height="300"
+													/>
+												</picture>
+											</li>
+										</ul>
+									</div>
+								</section>
+								<c-global.Arrows></c-global.Arrows>
+							</div>
+							<ul class="good-place__consultation-list consultation">
+								<li class="good-place__consultation-item consultation__item">
+									<p class="consultation__text">
+										Воспользуйтесь бесплатной консультацией
+									</p>
+									<c-global.Form></c-global.Form>
+									<p class="consultation__text-agreement">
+										Оставляя заявку вы даёте согласие на обработку ваших
+										<span>Персональных данных</span>
+									</p>
+								</li>
+								<li class="good-place__consultation-item">
+									<p class="good-place__item-text">
+										Не&nbsp;хотите оставлять заявку?
+									</p>
+									<div class="good-place__item-wrapper">
+										<span class="good-place__item-span"
+											>Свяжитесь с&nbsp;мастером напрямую</span
+										>
+										<ul class="good-place__social-list contacts__social-list">
+											<li>
+												<span class="visually-hidden"> Телеграм </span>
+												<a class="contacts__social-link" href="#">
+													<c-icons.Telegram></c-icons.Telegram>
+												</a>
+											</li>
+											<li>
+												<span class="visually-hidden"> Ватсап </span>
+												<a class="contacts__social-link" href="#">
+													<c-icons.Whatsapp></c-icons.Whatsapp>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="special-promotion">
+					<div class="special-promotion__container container">
+						<h2 class="special-promotion__title">Специальные предложения</h2>
+						<div class="special-promotion__slider-wrapper">
+							<section
+								class="splide splide__special-promotion"
+								data-slider="splide__special-promotion"
+							>
+								<div class="splide__track">
+									<ul class="splide__list">
+										<li class="splide__slide">
+											<div class="special-promotion__item">
+												<h3 class="special-promotion__text">
+													Скидка на услуги при первом посещении
+												</h3>
+												<a class="special-promotion__link arrow-link"
+													>Записаться</a
+												>
+											</div>
+										</li>
+										<li class="splide__slide">
+											<div class="special-promotion__item">
+												<h3 class="special-promotion__text">
+													Скидка на услуги при первом посещении
+												</h3>
+												<a class="special-promotion__link arrow-link"
+													>Записаться</a
+												>
+											</div>
+										</li>
+										<li class="splide__slide">
+											<div class="special-promotion__item">
+												<h3 class="special-promotion__text">
+													Скидка на услуги при первом посещении
+												</h3>
+												<a class="special-promotion__link arrow-link"
+													>Записаться</a
+												>
+											</div>
+										</li>
+										<li class="splide__slide">
+											<div class="special-promotion__item">
+												<h3 class="special-promotion__text">
+													Скидка на услуги при первом посещении
+												</h3>
+												<a class="special-promotion__link arrow-link"
+													>Записаться</a
+												>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</section>
+							<c-global.Arrows></c-global.Arrows>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer__container container">
+					<div class="footer__head-wrapper">
+						<div class="footer__contact-wrapper">
+							<h2 class="footer__title">Контакты</h2>
+							<div class="footer__contact contacts">
+								<div class="contacts__address-wrapper">
+									<span class="contacts__address"
+										>г. Москва,<span>Таганский р-н</span> ул. Мельникова,
+										д.&nbsp;5</span
+									>
+									<a class="contacts__link arrow-link" href="#">Как проехать</a>
+								</div>
+								<ul class="contacts__list">
+									<li class="contacts__item">
+										<a class="contacts__tel" href="tel:+7-495-153-58-16"
+											>+7 (495) 153-58-16</a
+										>
+										<span class="contacts__time">c 09:00 до 21:00</span>
+									</li>
+									<li class="contacts__item">
+										<ul class="contacts__social-list">
+											<li>
+												<span class="visually-hidden"> Телеграм </span>
+												<a class="contacts__social-link" href="#">
+													<c-icons.Telegram></c-icons.Telegram>
+												</a>
+											</li>
+											<li>
+												<span class="visually-hidden"> Ватсап </span>
+												<a class="contacts__social-link" href="#">
+													<c-icons.Whatsapp></c-icons.Whatsapp>
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__image-wrapper">
+							<picture>
+								<source
+									media="(min-width: 769px)"
+									srcset="/images/map.jpg, /images/map@2x.jpg"
+									width="600"
+									height="270"
+								/>
+								<source
+									media="(min-width: 376px)"
+									srcset="/images/map-tablet.jpg, /images/map-tablet@2x.jpg"
+									width="330"
+									height="155"
+								/>
+
+								<img
+									src="/images/map-mobile.jpg"
+									srcset="/images/map-mobile@2x.jpg"
+									alt="карта"
+									width="170"
+									height="154"
+								/>
+							</picture>
+							<!-- <img src="/images/map.jpg" alt="" /> -->
+						</div>
+					</div>
+					<div class="footer__lower-wrapper">
+						<img
+							class="footer__logo"
+							src="/svg/footer-logo.svg"
+							alt="логотип компании"
+							width="290"
+							height="56"
+						/>
+						<div class="footer__text-wrapper">
+							<ul class="footer__list">
+								<li class="footer__item">
+									<a class="footer__link" href="#"
+										>Политика конфиденциальности</a
+									>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">Правовые уведомления</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">Термины</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">Разработка сайта</a
+									><img
+										src="/svg/serptop-logo.svg"
+										alt="логотип компании серптоп"
+										width="122"
+										height="26"
+									/>
+								</li>
+							</ul>
+							<p class="footer__text">
+								Вся представленная на&nbsp;сайте информация стоимости сервисного
+								обслуживания, носит исключительно информационный характер
+								и&nbsp;не&nbsp;является публичной офертой, определяемой
+								положениями&nbsp;ст.&nbsp;437 (2) ГК&nbsp;РФ
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<c-global.Modal></c-global.Modal>
+		<c-global.Connexion></c-global.Connexion>
+		<div class="curtain" x-show="isOpenMenu" @click="isOpenMenu = false"></div>
+	</block>
+</extends>

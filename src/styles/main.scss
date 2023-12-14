@@ -1,0 +1,37 @@
+@tailwind base;
+/* @tailwind components;
+@tailwind utilities; */
+
+@layer base {
+	
+}
+/*    Global    */
+@import "./global.scss";
+@import "variables.scss";
+
+/*  componets  */
+
+@import "components/slider-arrows.scss";
+@import "components/connexion.scss";
+@import "components/icons.scss";
+
+/*   Block    */
+
+@import "blocks/header.scss";
+@import "blocks/menu.scss";
+@import "blocks/main-block.scss";
+@import "blocks/consultation.scss";
+@import "blocks/number.scss";
+@import "blocks/contacts.scss";
+@import "blocks/promotion.scss";
+@import "blocks/service.scss";
+@import "blocks/about.scss";
+@import "blocks/cost.scss";
+@import "blocks/achievements.scss";
+@import "blocks/good-place.scss";
+@import "blocks/special-promotion.scss";
+@import "blocks/footer.scss";
+@import "blocks/modal.scss";
+
+@import "blocks/opinion.scss";
+@import "blocks/headroom.scss";

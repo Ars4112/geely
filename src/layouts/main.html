@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/src/styles/main.scss" />
+
+    <block name="head"></block>
+  </head>
+
+  <body class="{{ bodyClass }}" x-data="{ isOpenModal: false, isOpenMenu: false }" :class="{'no-scroll': isOpenMenu }">
+    <block name="body"></block>
+
+    <script type="module" src="/src/scripts/main.js"></script>
+  </body>
+</html>

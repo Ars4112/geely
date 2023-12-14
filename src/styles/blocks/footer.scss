@@ -1,0 +1,285 @@
+.footer {
+	background: linear-gradient(105deg, #434e69 6.09%, #606f93 97.59%);
+	display: flex;
+	justify-content: center;
+	padding: 6.25rem 5rem;
+
+	@media (max-width: 768px) {
+		padding: 2.5rem 1.75rem;
+	}
+
+	@media (max-width: 375px) {
+		padding: 2.5rem 1rem;
+	}
+}
+
+.footer__container {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+
+	@media (max-width: 768px) {
+		gap: 2rem;
+	}
+}
+
+.footer__head-wrapper {
+	border-radius: 0.75rem;
+	background: #fff;
+	padding: 3rem 3.5rem;
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+
+	@media (max-width: 1400px) {
+		flex-direction: column;
+	}
+
+	@media (max-width: 768px) {
+		padding: 1.25rem 1.5rem;
+		gap: 1.25rem;
+	}
+}
+
+.footer__contact-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-width: 23rem;
+	gap: 3rem;
+
+	@media (max-width: 768px) {
+		gap: 1.5rem;
+		min-width: 100%;
+	}
+
+	@media (max-width: 375px) {
+		gap: 1.25rem;
+	}
+}
+
+.footer__title {
+	font-size: 3rem;
+	font-weight: 600;
+	line-height: 3rem;
+
+	@media (max-width: 768px) {
+		font-size: 1.625rem;
+		line-height: 1.875rem;
+	}
+}
+
+.footer__contact {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 1rem;
+
+	@media (max-width: 1400px) {
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		column-gap: 3rem;
+		row-gap: 1rem;
+	}
+
+	@media (max-width: 992px) {
+		flex-wrap: wrap-reverse;
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: row-reverse;
+		column-gap: 3.63rem;
+	}
+
+	@media (max-width: 680px) {
+		flex-wrap: nowrap;
+		flex-direction: column-reverse;
+		
+	}
+
+	.contacts__address-wrapper {
+		gap: 0.25rem;
+
+		@media (max-width: 768px) {
+			gap: 0;
+		}
+	}
+
+	.contacts__list {
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 1.5rem;
+
+		@media (max-width: 768px) {
+			gap: 1rem;
+		}
+
+		@media (max-width: 375px) {
+			flex-direction: column;
+		}
+	}
+
+	.contacts__item {
+		@media (max-width: 768px) {
+			padding-left: 0;
+			gap: 0.2rem;
+		}
+		&:not(:first-child) {
+			padding-left: 1.5rem;
+
+			@media (max-width: 1400px) {
+				border-left: none;
+				padding-left: 0;
+			}
+		}
+	}
+
+	.contacts__tel {
+		font-size: 1.75rem;
+		font-weight: 700;
+		line-height: 2.25rem;
+		text-transform: uppercase;
+
+		@media (max-width: 768px) {
+			font-size: 1.39rem;
+			line-height: 1.5rem;
+		}
+	}
+
+	.contacts__time {
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 1.5rem;
+
+		@media (max-width: 768px) {
+			font-size: 0.75rem;
+			line-height: 1rem;
+		}
+	}
+
+	.contacts__address {
+		font-size: 1.15rem;
+		font-weight: 500;
+		line-height: 1.625rem;
+
+		@media (max-width: 768px) {
+			font-size: 1rem;
+			line-height: 1.5rem;
+
+			& span {
+				display: none;
+			}
+		}
+	}
+
+	.contacts__link {
+		font-size: 1rem;
+		line-height: 1.5rem;
+
+		@media (max-width: 768px) {
+			font-size: 0.75rem;
+			line-height: 1rem; 
+		}
+	}
+
+	.contacts__social-list {
+		justify-content: flex-start;
+	}
+
+	.contacts__social-icon {
+		width: 2rem;
+		height: 2rem;
+	}
+}
+
+.footer__image-wrapper {
+	border-left: solid 1px #c4c8d3;
+	padding-left: 5rem;
+
+	& img {
+		width: 100%;
+	}
+
+	@media (max-width: 1400px) {
+		border-left: none;
+		padding-left: 0;
+	}
+}
+
+.footer__lower-wrapper {
+	border-top: solid 1px #c4c8d3;
+	padding-top: 2.5rem;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 3rem;
+
+	@media (max-width: 1280px) {
+		flex-direction: column;
+		gap: 2rem;
+		padding-top: 2rem;
+	}
+}
+
+.footer__logo {
+	@media (max-width: 768px) {
+		width: 8.75rem;
+		height: 1.6rem;
+	}
+}
+
+.footer__text-wrapper {
+	display: flex;
+	justify-content: space-between;
+
+	gap: 6rem;
+
+	@media (max-width: 768px) {
+		width: 100%;
+		gap: 3rem;
+	}
+
+	@media (max-width: 520px) {
+		flex-direction: column;
+		gap: 2.37rem;
+	}
+}
+
+.footer__list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.footer__item {
+	display: flex;
+	align-items: center;
+	gap: 0.44rem;
+}
+
+.footer__link {
+	font-size: 0.8125rem;
+	font-weight: 500;
+	line-height: 1.125rem;
+	color: #fefefe;
+	width: max-content;
+}
+
+.footer__text {
+	max-width: 49rem;
+	color: #fefefe;
+	font-size: 0.8125rem;
+	line-height: 1.125rem;
+
+	@media (max-width: 1400px) {
+		max-width: 30rem;
+	}
+
+	@media (max-width: 768px) {
+		max-width: 21.5rem;
+		font-size: 0.75rem;
+		line-height: 1rem;
+	}
+
+	@media (max-width: 520px) {
+		max-width: 100%;
+	}
+}

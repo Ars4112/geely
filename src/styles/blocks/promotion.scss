@@ -1,0 +1,141 @@
+.promotion__item {
+	border-radius: 5.5rem;
+	background: #fff;
+	box-shadow: 0px 8px 16px 0px rgba(215, 216, 220, 0.5);
+	display: flex;
+	gap: 2rem;
+	padding: 0.63rem;
+	position: relative;
+
+	&:hover .promotion__image-wrapper {
+		transform: scale(1.1);
+	}
+
+	&:hover .promotion__link {
+		padding-right: 2rem;
+	}
+
+	@media (max-width: 768px) {
+		gap: 0.5rem;
+	}
+}
+
+.promotion__image-wrapper {
+	background-color: #e4e7ee;
+	border-radius: 50%;
+	width: 7.5rem;
+	height: 7.5rem;
+	flex-shrink: 0;
+
+	@media (max-width: 768px) {
+		width: 4.7rem;
+		height: 4.7rem;
+	}
+}
+
+.promotion__text-wrapper {
+	max-width: 18rem;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem 0;
+	// gap: 1rem;
+
+	@media (max-width: 768px) {
+		max-width: 12rem;
+		padding: 0;
+		// gap: 1.5rem;
+	}
+}
+
+.promotion__text {
+	font-size: 1.125rem;
+	font-weight: 600;
+	line-height: 1.5rem;
+	text-align: start;
+
+	@media (max-width: 768px) {
+		font-size: 0.875rem;
+		line-height: 1.125rem;
+	}
+}
+
+.promotion__link {
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1rem;
+	position: relative;
+	padding-right: 1.75rem;
+	width: max-content;
+	margin-top: 1rem;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 0.75rem;
+		line-height: 1rem;
+		margin-top: auto;
+	}
+}
+
+// .splide {
+// 	.splide__arrows {
+// 		position: relative;
+
+// 		@media (max-width: 768px) {
+// 			display: none;
+// 		}
+// 	}
+// 	.splide__arrow {
+// 		background: none;
+// 		top: -21px;
+// 		width: 2.5rem;
+// 		height: 2.5rem;
+
+// 		& svg {
+// 			width: 2.5rem;
+// 			height: 2.5rem;
+// 		}
+
+// 		&:hover svg path {
+// 			fill: #1a6cf3;
+// 		}
+
+// 		&:hover svg path:last-child {
+// 			fill: #fcfdfd;
+// 		}
+// 	}
+
+// 	.splide__arrow--prev {
+// 		left: 51.2%;
+// 		transform: translateX(-50%);
+// 	}
+
+// 	.splide__arrow--next {
+// 		right: 50%;
+// 		transform: translateX(50%);
+// 		transform: rotate(0.5turn);
+// 	}
+
+// 	.splide__slide {
+// 		width: 32rem;
+// 		min-height: 8.7rem;
+
+// 		@media (max-width: 768px) {
+// 			width: 19rem;
+// 			min-height: 6rem;
+// 		}
+// 	}
+
+// 	.splide__line {
+// 		width: 100%;
+// 		height: 1px;
+// 		background-color: #c4c8d3;
+// 	}
+// }

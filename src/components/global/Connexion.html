@@ -1,0 +1,59 @@
+<div
+	class="connexion"
+	x-data="{ open: false }"
+	:class="open ? 'connexion__active' : ''"
+	@click.outside="open = false"
+>
+	<button
+		class="connexion__button button--close"
+		x-on:click="open = false"
+		:class="!open && 'hidden'"
+	></button>
+
+	<p class="connexion__text" :class="!open && 'hidden'">
+		Свяжитесь с нами любым удобным для вас способом:
+	</p>
+	<ul class="connexion__list" :class="!open && 'hidden'">
+		<li>
+			<span class="visually-hidden"> Позвонить </span>
+			<a class="contacts__social-link" href="#">
+				<c-icons.Call></c-icons.Call>
+			</a>
+		</li>
+		<li>
+			<span class="visually-hidden"> Телеграм </span>
+			<a class="contacts__social-link" href="#">
+				<c-icons.Telegram></c-icons.Telegram>
+			</a>
+		</li>
+		<li>
+			<span class="visually-hidden"> Ватсап </span>
+			<a class="contacts__social-link" href="#">
+				<c-icons.Whatsapp></c-icons.Whatsapp>
+			</a>
+		</li>
+	</ul>
+	<div
+		class="connexion__slider-wrapper"
+		:class="open ? 'connexion__slider-wrapper--hidden' : ''"
+	>
+		<section class="splide splide__connexion" data-slider="splide__connexion">
+			<div class="splide__track">
+				<ul class="splide__list">
+					<li class="splide__slide" x-on:click="open = ! open">
+						<c-icons.Plus></c-icons.Plus>
+					</li>
+					<li class="splide__slide" x-on:click="open = ! open">
+						<c-icons.Call></c-icons.Call>
+					</li>
+					<li class="splide__slide" x-on:click="open = ! open">
+						<c-icons.Telegram></c-icons.Telegram>
+					</li>
+					<li class="splide__slide" x-on:click="open = ! open">
+						<c-icons.Whatsapp></c-icons.Whatsapp>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+</div>

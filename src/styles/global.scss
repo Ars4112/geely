@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	color: #313e48;
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-display: swap;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.5rem;
+	
+}
+
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+img,
+video {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+textarea {
+	resize: none;
+}
+
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.header,
+.footer {
+	flex-shrink: 0;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.button {
+	background: #1a6cf3;
+	color: #ffffff;
+	border: none;
+	border-radius: 1.75rem;
+
+	&:hover {
+		background-color: #004bc7;
+	}
+}
+
+.arrow-link {
+	color: #1a6cf3;
+	&::before {
+		content: "";
+		background-image: url("/svg/double-arrow.svg");
+		background-size: 1.25rem;
+		width: 1.25rem;
+		height: 1.25rem;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 0;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: 114rem;
+}
+
+.curtain {
+	background: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(8px);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+
+.no-scroll {
+	overflow-y: hidden;
+}
+
+.hidden {
+	display: none;
+}
+
+

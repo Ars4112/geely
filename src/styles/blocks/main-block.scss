@@ -1,0 +1,79 @@
+.main__block {
+	background-image: url("/images/car.png"),
+		linear-gradient(77deg, #eef1f7 0%, #c7cee2 43.69%, #afbcd1 99.15%);
+	background-position: right center;
+	background-repeat: no-repeat;
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 1.75rem 5rem;
+	padding-top: 5.5rem;
+	position: relative;
+
+	@media (max-width: 768px) {
+		background-image: url("/images/car-tablet.png"),
+			linear-gradient(77deg, #eef1f7 0%, #c7cee2 43.69%, #afbcd1 99.15%);
+		padding: 0;
+	}
+
+	@media (max-width: 375px) {
+		background-image: url("/images/car-mobile.png"),
+			linear-gradient(77deg, #eef1f7 0%, #c7cee2 43.69%, #afbcd1 99.15%);
+	}
+}
+
+/* @media (min-resolution: 2dppx) {
+    .main__block {
+        background: url("/images/car@2x.png"),
+            linear-gradient(77deg, #eef1f7 0%, #c7cee2 43.69%, #afbcd1 99.15%);
+
+        height: 100vh;
+        width: 100%;
+    }
+} */
+
+.main__block-inner {
+	border-radius: 0.75rem;
+	background: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(16px);
+	width: 100%;
+	padding: 2.5rem 4.5rem 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 3.5rem;
+
+	@media (max-width: 992px) {
+		padding: 2.25rem 2.5rem 3rem;
+	}
+
+	@media (max-width: 768px) {
+		background: none;
+		backdrop-filter: none;
+		padding: 4.75rem 1.75rem 2.25rem;
+		gap: 1.8rem;
+	}
+
+	@media (max-width: 375px) {
+		background: none;
+		backdrop-filter: none;
+		gap: 0.5rem;
+		padding: 4.75rem 1rem 1rem;
+	}
+}
+
+.main__block-slider-wrapper {
+	overflow: hidden;
+	padding-top: 2.5rem;
+
+	@media (max-width: 768px) {
+		padding-top: 0.75rem;
+	}
+}
+
+.main__block-consultation {
+	display: flex;
+	align-items: stretch;
+	flex-wrap: wrap;
+	gap: 1.75rem;
+}

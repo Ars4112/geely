@@ -1,0 +1,84 @@
+.contacts__social-item:hover .contacts__social-telegram .hover-color {
+	fill: #076e9e;
+}
+
+.contacts__social-item:hover .contacts__social-whatsapp .green {
+	fill: #0c7b28;
+}
+
+.contacts__social-link {
+	display: block;
+	width: 1.75rem;
+	height: 1.75rem;
+
+	@media (max-width: 768px) {
+		width: 2rem;
+		height: 2rem;
+	}
+}
+
+.contacts__social-item:hover .contacts__social-icon-call circle {
+	fill: #cd2028;
+}
+
+.contacts__social-icon {
+	width: 100%;
+	height: 100%;
+	// width: 1.75rem;
+	// height: 1.75rem;
+
+	// @media (max-width: 768px) {
+	// 	width: 2rem;
+	// 	height: 2rem;
+	// }
+}
+
+
+
+.contacts__social-icon-plus {
+	background-color: #1a6cf3;
+	border-radius: 50%;
+	width: 4.5rem;
+	height: 4.5rem;
+	position: relative;
+
+	&:hover {
+		background-color: #004bc7;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		width: 30px;
+		height: 2px;
+		background: #fcfdfd;
+		position: absolute;
+	}
+
+	&::before {
+		content: "";
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&::after {
+		content: "";
+		top: 50%;
+		left: 50%;
+
+		transform: translate(-50%, -50%) rotate(90deg);
+	}
+}
+
+.connexion__active,
+.header__inner-wrapper {
+	.contacts__social-icon-call circle {
+		fill: #1a6cf3;
+
+		&:hover circle {
+			fill: #004bc7;
+		}
+	}
+}
+

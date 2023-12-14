@@ -1,0 +1,189 @@
+.good-place {
+	display: flex;
+	justify-content: center;
+	padding: 6.25rem 5rem 6rem;
+
+	@media (max-width: 768px) {
+		padding: 2.5rem 1.75rem;
+	}
+
+	@media (max-width: 375px) {
+		padding: 2.5rem 1rem;
+	}
+}
+
+.good-place__container {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	@media (max-width: 768px) {
+		gap: 2rem;
+	}
+}
+
+.good-place__title-wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 3rem;
+
+	@media (max-width: 375px) {
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 1rem;
+	}
+}
+
+.good-place__title {
+	font-size: 2.9rem;
+	font-weight: 600;
+	line-height: 3.625rem;
+
+	@media (max-width: 768px) {
+		font-size: 1.625rem;
+		line-height: 1.875rem;
+	}
+}
+
+.good-place__block-wrapper {
+	display: flex;
+	gap: 2.5rem;
+
+	@media (max-width: 1400px) {
+		flex-direction: column;
+	}
+
+	@media (max-width: 768px) {
+		gap: 3.5rem;
+	}
+
+	@media (max-width: 375px) {
+		gap: 3.75rem;
+	}
+}
+
+.good-place__consultation-list {
+	padding: 2rem;
+	border-radius: 0.75rem;
+	background: #e4e7ee;
+	min-width: 37.5rem;
+	margin-bottom: 4rem;
+
+	@media (max-width: 1400px) {
+		margin-bottom: 0;
+	}
+
+	@media (max-width: 768px) {
+		padding: 1.25rem 1.5rem;
+		min-width: 100%;
+	}
+}
+
+.good-place__consultation-item {
+	padding: 0;
+	&:not(:last-child) {
+		border-bottom: 1px solid #c4c8d3;
+		padding-bottom: 2rem;
+
+		@media (max-width: 768px) {
+			padding-bottom: 1.5rem;
+		}
+	}
+}
+
+.good-place__item-text {
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 2.125rem;
+	margin-top: 3.25rem;
+	margin-bottom: 1rem;
+
+	@media (max-width: 768px) {
+		font-size: 1.25rem;
+		line-height: 1.625rem;
+		margin-top: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	@media (max-width: 375px) {
+		line-height: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
+}
+
+.good-place__item-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+
+	@media (max-width: 375px) {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+}
+
+.good-place__item-span {
+	font-size: 1.125rem;
+	font-weight: 500;
+	line-height: 1.625rem;
+
+	@media (max-width: 768px) {
+		font-size: 1rem;
+		line-height: 1.75rem;
+	}
+}
+
+.good-place__image {
+	width: 100%;
+	object-fit: cover;
+	object-position: left center;
+	height: 100%;
+	border-radius: 0.75rem;
+
+	@media (max-width: 768px) {
+		height: auto;
+	}
+}
+
+.good-place__block-wrapper {
+	.consultation__item {
+		background-color: transparent;
+		min-height: 0;
+		border-radius: 0;
+
+		@media (max-width: 768px) {
+			gap: 1rem;
+		}
+		@media (max-width: 375px) {
+			gap: 1.1rem;
+		}
+	}
+
+	@media (max-width: 1400px) {
+		.consultation__input-wrapper {
+			max-width: 37.5rem;
+		}
+		.consultation__text {
+			max-width: 100%;
+
+			@media (max-width: 768px) {
+				max-width: 23rem;
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		.consultation__input-wrapper {
+			padding-top: 0;
+		}
+
+		.consultation__text-agreement {
+			padding-top: 0.25rem;
+
+			@media (max-width: 375px) {
+				padding-top: 0;
+			}
+		}
+	}
+}

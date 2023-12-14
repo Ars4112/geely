@@ -1,0 +1,67 @@
+<div class="modal" x-show="isOpenModal">
+	<div
+		class="modal__curtain"
+		x-show="isOpenModal"
+		@click="isOpenModal = false"
+		x-transition:enter.duration.100ms
+		x-transition:enter-start.opacity.0
+		x-transition:enter-end.opacity.100
+		x-transition:leave.duration.200ms
+		x-transition:leave-start.opacity.100
+		x-transition:leave-end.opacity.0
+	></div>
+	<div
+		class="modal__container"
+		x-show="isOpenModal"
+		x-transition:enter.duration.300ms
+	>
+		<button class="modal__button" @click="isOpenModal = false"></button>
+		<div class="modal__logo-wrapper">
+			<img src="/svg/logo.svg" alt="Логотип" />
+		</div>
+		<ul class="modal__list befor-submit">
+			<li class="modal__item consultation__item">
+				<p class="consultation__text">
+					Воспользуйтесь спецпредложением получите ощутимую выгоду!
+				</p>
+				<c-global.Form></c-global.Form>
+				<p class="consultation__text-agreement">
+					Оставляя заявку вы даёте согласие на обработку ваших
+					<span>Персональных данных</span>
+				</p>
+			</li>
+			<li class="modal__item good-place__consultation-item">
+				<p class="good-place__item-text">Не&nbsp;хотите оставлять заявку?</p>
+				<div class="good-place__item-wrapper">
+					<span class="good-place__item-span"
+						>Свяжитесь с&nbsp;мастером напрямую</span
+					>
+					<ul class="good-place__social-list contacts__social-list">
+						<li class="contacts__social-item">
+							<span class="visually-hidden"> Телеграм </span>
+							<a class="contacts__social-link" href="#">
+								<c-icons.Telegram></c-icons.Telegram>
+							</a>
+						</li>
+						<li class="contacts__social-item">
+							<span class="visually-hidden"> Ватсап </span>
+											<a class="contacts__social-link" href="#">
+												<c-icons.Whatsapp></c-icons.Whatsapp>
+											</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="modal__submit after-submit hidden">
+			<p class="modal__submit-text">Спасибо, ваша заявка отправлена!</p>
+			<span class="modal__submit-sub-text"
+				>Наши специалисты свяжутся с вами в ближайшее время</span
+			>
+
+			<button class="modal__submit-button button" @click="isOpenModal = false">
+				Закрыть
+			</button>
+		</div>
+	</div>
+</div>
