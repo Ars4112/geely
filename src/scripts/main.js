@@ -137,7 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		perPage: 1,
 		gap: "1rem",
 		pagination: false,
-		// fixedHeight: "33.75rem",
 		arrows: false,
 		breakpoints: {
 			768: {
@@ -155,11 +154,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		breakpoints: {
 			1400: {
 				perPage: 2,
-				pagination: true,
 			},
 
 			375: {
 				perPage: 1,
+				pagination: true,
 			},
 		},
 	});
@@ -178,31 +177,29 @@ document.addEventListener("DOMContentLoaded", () => {
 	}).mount();
 
 	const tabButton = document.querySelectorAll(".service__text");
-	const tabTitle = document.querySelectorAll(".service__tab-title");
-	const tab = document.querySelectorAll(".service__tab");
 
-	console.log(tabButton[0].parentElement);
+	const tab = document.querySelectorAll(".service__tab");
 
 	tab.forEach((i) => {
 		i.classList.add("hidden");
 	});
 
 	tabButton[0].parentElement.classList.toggle("service__item--active");
-	tab[0].classList.remove("hidden");
 
 	tabButton.forEach((i) => {
 		i.addEventListener("click", () => {
 			tabButton.forEach((j) => {
 				j.parentElement.classList.remove("service__item--active");
 			});
-			tab.forEach((j) => {
-				const tabTitle = j.querySelector(".service__tab-title");
-				j.classList.add("hidden");
+			tab.forEach((el) => {
+				const tabTitle = el.querySelector(".service__tab-title");
+				el.classList.add("hidden");
 				if (tabTitle.textContent.trim() === i.textContent.trim()) {
-					j.classList.remove("hidden");
+					el.classList.remove("hidden");
 				}
 			});
 			i.parentElement.classList.toggle("service__item--active");
 		});
 	});
+	tabButton[0].click();
 });
